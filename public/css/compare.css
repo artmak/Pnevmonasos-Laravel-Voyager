@@ -1,0 +1,13 @@
+/*!
+CSS Compare section
+ */
+th>img.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45px;
+}
+.text-normal{
+    font-weight: normal;
+    font-size: 8pt;
+}
