@@ -510,8 +510,24 @@
                 <div class="loader-icon"></div>
             </div>
             <div class="col-md-12 row" id="compare_portfolio-list">
+                @foreach($page as $page)
+                    <div class="col-4 wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+                        <div class="product-item">
+                            <a href="/public/page/{{$page->slug}}" class="product-img">
+                                <img src="{{ Voyager::image( $page->image ) }}" class="cat-img">
+                            </a>
+                            <a href="/public/page/{{$page->slug}}" class="product-item-title">{{ $page->title }}</a>
+                        </div>
+                       <div>
+                           <p>{!! $page->excerpt !!}</p>
+                       </div>
+
+                    </div>
+                @endforeach
+
+
                 <!-- PORTFOLIO ITEMS-->
-                <div class="col-4 wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+                <div hidden class="col-4 wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
                     <div class="product-item">
                         <a href="public/compare.html" class="product-img">
                             <img src="public//images/projects/phoenix_p7_per.jpg" class="cat-img">
@@ -520,7 +536,7 @@
                     </div>
 
                 </div>
-                <div class="col-4 wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+                <div hidden class="col-4 wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
                     <div class="product-item">
                         <a href="public/principle_of_operation.html" class="product-img">
                             <img src="public//images/projects/phoenix_p7_pp.jpg" class="cat-img">
@@ -529,7 +545,7 @@
                     </div>
 
                 </div>
-                <div class="col-4 wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+                <div hidden class="col-4 wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
                     <div class="product-item">
                         <a href="public/selection.html" class="product-img">
                             <img src="public//images/projects/phoenix_pf700_aisi.jpg" class="cat-img">
@@ -757,8 +773,36 @@
 	    <div class="loader-icon"></div>
 	</div>
 	<div class="col-md-12 row" id="portfolio-list">
+        @foreach($category as $category)
+            <div class="col-4">
+
+                <div class="product-item">
+                    <a href="public/{{$category->slug}}" class="product-img more">
+                        <img src="{{Voyager::image($category->image) }}" class="cat-img">
+                    </a>
+                    <a href="public/{{$category->slug}}" class="more product-item-title">{{ $category->name}}</a>
+                </div>
+
+                <div class="grid" hidden>
+                    <figure class="effect-julia">
+                        <img class="catalog" src="public/images/main_page/st.png" alt="img21">
+                        <figcaption>
+                            <h4>Мембранные пневмонасосы серии <span>- P7 - 1000</span></h4>
+                            <div>
+                                <p>Классические мембранные пневмонасосы</p>
+
+                            </div>
+                            <a href="public/standart.html" class="more">View more</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+        @endforeach
+
+
 		<!-- PORTFOLIO ITEMS-->
-        <div class="col-4">
+        <div hidden class="col-4">
 
             <div class="product-item">
                 <a href="public/standart.html" class="product-img more">
@@ -781,7 +825,7 @@
                 </figure>
             </div>
         </div>
-        <div class="col-4">
+        <div hidden class="col-4">
             <div class="product-item">
                 <a href="public/atex.html" class="product-img more">
                     <img src="public/images/main_page/atex.png" class="cat-img">
@@ -803,7 +847,7 @@
                 </figure>
             </div>
         </div>
-        <div class="col-4">
+        <div hidden class="col-4">
             <div class="product-item">
                 <a href="public/food.html" class="product-img more">
                     <img src="public/images/main_page/fd.png" class="cat-img">
@@ -1089,7 +1133,7 @@
 	<div class="section-header">
 
 		<!-- SECTION TITLE -->
-		<h2 class="dark-text">Инновации</h2>
+		<h2 class="dark-text">Статьи</h2>
 
 		<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
 		<h6>

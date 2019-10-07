@@ -12,10 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $category = App\Category::all();
+    $page = App\Page::all();
+
+    return view('welcome', compact('page', 'category'));
 });
 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+});
+
+Route::get('page/{slug}', function ($slug){
+    $page = App\Page::where('slug', '=', $slug)->firstOrFail();
+    return view('page', compact('page'));
 });

@@ -4,10 +4,10 @@
 $.vegas('slideshow', {
   delay:7000,
   backgrounds:[
-        { src:'public/images/backgrounds/bg0.jpg', fade:800},
-        { src:'public/images/backgrounds/bg1.jpg', fade:700 },
-        { src:'public/images/backgrounds/bg2.jpg', fade:900 },
-        { src:'public/images/backgrounds/bg3.jpg', fade:600 }
+        { src:'/public/images/backgrounds/bg0.jpg', fade:800},
+        { src:'/public/images/backgrounds/bg1.jpg', fade:700 },
+        { src:'/public/images/backgrounds/bg2.jpg', fade:900 },
+        { src:'/public/images/backgrounds/bg3.jpg', fade:600 }
   ]
 });
 
