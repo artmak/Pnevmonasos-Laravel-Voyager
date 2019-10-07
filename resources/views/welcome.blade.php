@@ -777,10 +777,10 @@
             <div class="col-4">
 
                 <div class="product-item">
-                    <a href="public/{{$category->slug}}" class="product-img more">
+                    <a href="public/category/{{$category->id}}" class="product-img">
                         <img src="{{Voyager::image($category->image) }}" class="cat-img">
                     </a>
-                    <a href="public/{{$category->slug}}" class="more product-item-title">{{ $category->name}}</a>
+                    <a href="public/category/{{$category->id}}" class="product-item-title">{{ $category->name}}</a>
                 </div>
 
                 <div class="grid" hidden>

@@ -1,13 +1,15 @@
 @extends('layouts.main')
 
-@section('title', '{{$page->title}}')
+@section('title', '{{$item->title}}')
+
+
 
 @section('content')
     <div class="container">
-        <h1>{{$page->title}}</h1>
+        <h1>{{$item->title}}</h1>
         <div class="row">
             <p>
-                {!! $page->body !!}
+                {!! $item->body !!}
             </p>
         </div>
     </div>

@@ -23,7 +23,16 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+Route::get('category/{Category_id}','CategoryController@getCategory')->name('categories.show');
+
+
 Route::get('page/{slug}', function ($slug){
     $page = App\Page::where('slug', '=', $slug)->firstOrFail();
     return view('page', compact('page'));
 });
+
+Route::get('item/{slug}', function ($slug){
+    $item = App\Post::where('slug', '=', $slug)->firstOrFail();
+    return view('item', compact('item'));
+}
+);
