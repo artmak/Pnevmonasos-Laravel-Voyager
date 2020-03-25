@@ -49,7 +49,7 @@
 
     <style>
         .top-bar{
-            margin: 5.5% 0 -5.5% 0;
+            margin: 5.5% 0 -7.5% 0;
             text-align: left;
             color: grey;
             background: rgba(11, 121, 179, 0.9);
